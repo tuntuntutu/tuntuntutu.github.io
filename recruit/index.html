@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>这是一个招聘网页</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui"/>
+    <!--<link rel="stylesheet/mcss" href="index.mcss"/>-->
+    <style>
+        *{
+        margin:0;
+        padding:0;
+    }
+    ul,ol{
+        list-style:none;
+    }
+    h1,h2,h3,h4,h5,h6,th,em,strong,i{
+        font-weight:normal;
+        font-style:normal;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-size:100%;
+    }
+    table{
+        border-collapse:collapse;
+        border-spacing:0;
+    }
+    body{
+        color:#666;
+        font:12px/1.5 "microsoft yahei";
+        background:rgba(26, 39, 78, 0.73);
+        width:100%;
+        overflow-x:hidden;
+    }
+    .imgwrap{
+        position:relative;
+        padding-top:30%;
+        overflow:hidden;
+    }
+    .imgwrap .img{
+        position:absolute;
+        height:100%;
+        left:50%;
+        top:0;
+        transform:translateX(-50%);
+        z-index:-1;
+    }
+    a{
+        color:#666;
+        text-decoration:none;
+    }
+    a:hover{
+        color:#000;
+    }
+    .f-cb{
+        zoom:1;
+    }
+    .f-cb:after{
+        display:block;
+        content:"";
+        height:0;
+        overflow:hidden;
+        visibility:hidden;
+        clear:both;
+    }
+    .g-doc{
+        margin-top:-10%;
+        z-index: 999;
+        position: relative;
+    }
+    .g-bd{
+        max-width:1200px;
+        _width:1200px;
+        min-height:745px;
+        padding:3% 5%;
+        margin:0 auto 50px;
+        background:#fff;
+        overflow:auto;
+    }
+    .g-sd1{
+        position:relative;
+        float:left;
+        width:10%;
+        min-width:52px;
+        margin-right:-12%;
+    }
+    .g-mn1{
+        float:right;
+        width:100%;
+    }
+    .g-mn1c{
+        margin-left:12%;
+    }
+    .g-ft{
+        margin:50px 0 0;
+        padding:0 0 20px;
+    }
+    .m-tab{
+        margin-top:40px;
+    }
+    .m-tab li{
+        float:left;
+    }
+    .m-tab li a{
+        position:relative;
+        float:left;
+        font-size:26px;
+        color:#333;
+        line-height:30px;
+        padding:14px 0;
+        font-weight:bold;
+    }
+    .m-tab li a:hover,.m-tab li a:active{
+        color:#a91a26;
+    }
+    .m-tab .z-crt a{
+        color:#a91a26;
+    }
+    .m-subtab{
+        border-bottom:1px solid #ccc;
+        padding-left:9%;
+        zoom:1;
+    }
+    .m-subtab ul{
+        margin:0 0 -1px;
+    }
+    .m-subtab li{
+        float:left;
+        margin-right:70px;
+    }
+    .m-subtab li a{
+        position:relative;
+        float:left;
+        height:36px;
+        padding:0 5px 4px 5px;
+        font-size:22px;
+        color:#666;
+        line-height:30px;
+    }
+    .m-subtab li a:hover{
+        color:#080808;
+    }
+    .m-subtab .z-crt a{
+        padding-bottom:0;
+        border-bottom:4px solid #ccc;
+        color:#080808;
+    }
+    .m-article{
+        color:#666;
+    }
+    .m-article h2{
+        margin:40px 0 14px;
+        text-align:left;
+        font-size:20px;
+        font-weight:bold;
+        text-indent:-10px;
+    }
+    .m-article h3{
+        font-size:14px;
+        margin-bottom:40px;
+    }
+    .m-article p{
+        font-size:16px;
+        line-height:2.44;
+    }
+    .m-article .imgs{
+        margin-top:60px;
+    }
+    .m-article .imgs img{
+        margin-right:30px;
+    }
+    .m-article .footer{
+        width:100%;
+        margin-top:54px;
+        background:#9f000d;
+        text-align:center;
+        color:#fff;
+        padding:9px 0;
+    }
+    .m-article .footer p{
+        font-size:12px;
+        line-height:20px;
+    }
+    .m-article .footer a{
+        color:#e9d4d5;
+    }
+    .m-article .footer a:hover{
+        color:#ffd3c5;
+    }
+    .m-list{
+        margin-top:40px;
+        font-size:18px;
+    }
+    .m-list table{
+        width:100%;
+        table-layout:fixed;
+        border:0;
+    }
+    .m-list td{
+        line-height:22px;
+    }
+    .m-list th{
+        white-space:nowrap;
+        line-height:32px;
+        text-align:left;
+        font-weight:bold;
+        color:#333;
+        font-size:18px;
+        background:#f1f1f1;
+    }
+    .m-list td em,.m-list td i{
+        display:inline-block;
+        white-space:nowrap;
+        _display:inline;
+        _white-space:normal;
+    }
+    .m-list .c1{
+        padding:14px 40px;
+        border-right:0;
+    }
+    .m-list .c2{
+        width:40%;
+        padding:14px 0;
+        border-left:0;
+        text-align:center;
+    }
+    .m-list .sep{
+        position:relative;
+        border:0;
+        zoom:1;
+    }
+    .m-list .sep i{
+        position:absolute;
+        left:0;
+        top:0;
+        height:100%;
+        background:#999;
+        overflow:hidden;
+    }
+    .m-ft{
+        color:#fff;
+        font-size:12px;
+        line-height:1.5;
+        text-align:center;
+    }
+    .m-ft a,.m-ft a:hover{
+        color:#fff;
+    }
+    .m-ft i{
+        margin:0 4px;
+    }
+    @media screen and (max-width: 960px){
+        .imgwrap{
+            padding-top:50%;
+        }
+        .g-doc{
+            margin-top:-8%;
+        }
+        .m-list .c2{
+            width:18%;
+        }
+        .m-tab li a{
+            line-height:24px;
+            font-size:17px;
+        }
+    }
+    @media screen and (max-width: 767px){
+        .g-doc{
+            margin-top:-5%;
+        }
+        .g-sd1{
+            margin-right:-20%;
+        }
+        .g-mn1c{
+            margin-left:20%;
+        }
+        .g-bd{
+            margin-bottom:20px;
+        }
+        .g-ft{
+            margin:20px 0 0;
+            padding:0 0 10px;
+        }
+        .m-tab li a{
+            font-size:16px;
+        }
+        .m-article h2{
+            margin:20px 0;
+        }
+        .m-list{
+            margin-top:15px;
+            font-size:14px;
+        }
+        .m-list .c1{
+            padding:12px 5px;
+        }
+        .m-list .c2{
+            width:24%;
+            padding:12px 5px;
+        }
+        .m-list .sep i{
+            display:none;
+        }
+    }
+    @media screen and (max-width: 639px){
+        .m-subtab li{
+            margin-right:30px;
+        }
+        .g-doc{
+            margin-top:-2%;
+        }
+        .g-sd1{
+            margin-right:-15%;
+        }
+        .g-mn1c{
+            margin-left:15%;
+        }
+    }
+    @media screen and (max-width: 479px){
+        .g-sd1{
+            margin-right:-18%;
+        }
+        .g-mn1c{
+            margin-left:18%;
+        }
+    }
+    @media screen and (max-width: 320px){
+        .g-sd1{
+            margin-right:-20%;
+        }
+        .g-mn1c{
+            margin-left:20%;
+        }
+        .m-tab li a{
+            font-size:18px;
+        }
+        .m-list th{
+            font-size:14px;
+        }
+    }</style>
+</head>
+<body>
+<div class="imgwrap">
+    <img class="img" src="1.jpg" >
+</div>
+<!--招聘模块-->
+<div class="g-doc">
+    <div class="g-bd">
+        <div class="m-subtab">
+            <ul class="f-cb" id="subtab">
+                <li><a href="#develop">技术</a></li>
+                <li><a href="#data">产品</a></li>
+                <li><a href="#design">设计</a></li>
+                <!--<li><a href="#gongguan">公关</a></li>-->
+                <!--<li><a href="#market">市场</a></li>-->
+                <!--<li><a href="#business">商务</a></li>-->
+                <!--<li><a href="#operate">运营</a></li>-->
+                <!--<li><a href="#logistic">物流</a></li>-->
+            </ul>
+        </div>
+        <div class="g-sd1">
+            <div class="m-tab">
+                <ul class="f-cb" id="tab">
+                    <li><a href="#post">招聘岗位</a></li>
+                    <li><a href="#know">认识我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="g-mn1">
+            <div class="g-mn1c">
+                <!--技术-->
+                <div class="m-cnt j-cnt j-fathercnt" style="display:none">
+                    <div class="m-list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="c1">职位列表</th>
+                                <th class="c2">
+                                    <div class="sep">工作地点</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深Java服务器开发工程师</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级测试工程师</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>项目经理</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>iOS高级开发工程师</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级技术支持工程师</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级前端开发工程师</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>Android高级开发工程师</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--产品-->
+                <div class="m-cnt j-cnt" style="display:none">
+                    <div class="m-list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="c1">职位列表</th>
+                                <th class="c2">
+                                    <div class="sep">工作地点</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!--<tr>-->
+                                <!--<td class="c1"><a href="javascript:;"-->
+                                                  <!--target="_blank"><em>产品经理</em></a>-->
+                                <!--</td>-->
+                                <!--<td class="c2">XX</td>-->
+                            <!--</tr>-->
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>产品经理</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>数据分析师</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--设计-->
+                <div class="m-cnt j-cnt" style="display:none">
+                    <div class="m-list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="c1">职位列表</th>
+                                <th class="c2">
+                                    <div class="sep">工作地点</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深视觉设计师</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--公关-->
+                <div class="m-cnt j-cnt" style="display:none">
+                    <div class="m-list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="c1">职位列表</th>
+                                <th class="c2">
+                                    <div class="sep">工作地点</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>政府关系经理</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级保税专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--市场-->
+                <div class="m-cnt j-cnt" style="display:none">
+                    <div class="m-list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="c1">职位列表</th>
+                                <th class="c2">
+                                    <div class="sep">工作地点</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深品牌策划</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级商务合作</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级媒介专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>销售主管</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>城市经理</em></a>
+                                </td>
+                                <td class="c2">XXX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>新媒体营销策划</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--商务-->
+                <div class="m-cnt j-cnt" style="display:none">
+                    <div class="m-list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="c1">职位列表</th>
+                                <th class="c2">
+                                    <div class="sep">工作地点</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深采购专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深采购专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深采购专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深采购专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深采购专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>招商经理</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级采购经理</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级跟单员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>付款对账专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--运营-->
+                <div class="m-cnt j-cnt" style="display:none">
+                    <div class="m-list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="c1">职位列表</th>
+                                <th class="c2">
+                                    <div class="sep">工作地点</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级内容策划</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>KA商家运营</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深类目运营</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深类目运营</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深类目运营</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深类目运营</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深类目运营专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>店铺管理员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>网站运营专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级活动运营</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>资深类目运营</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--物流-->
+                <div class="m-cnt j-cnt" style="display:none">
+                    <div class="m-list">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="c1">职位列表</th>
+                                <th class="c2">
+                                    <div class="sep">工作地点</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级关务专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>国际物流市场专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>国际物流操作专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>国际物流运营专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>国际物流结算专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>物流服务运营经理</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>仓储运营经理</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级仓储运营专员</em></a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级运营专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            <tr>
+                                <td class="c1"><a href="javascript:;"
+                                                  target="_blank"><em>高级项目专员</em>XX</a>
+                                </td>
+                                <td class="c2">XX</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--认识我们-->
+                <div class="m-cnt j-fathercnt" style="display:none">
+                    <div class="m-article">
+                        <h2>这是一个标题</h2>
+
+                        <h3>——这是副标题</h3>
+
+                        <p>描述描述</p>
+                        <div class="imgs">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="g-ft">
+        <div class="m-ft">
+            <p>
+                XX<a href="javascript:;">公司简介</a>
+                XX<a href="javascript:;">联系方法</a>
+                XX<a href="javascript:;">招聘信息</a>
+                XX<a href="javascript:;">客户服务</a>
+                XX<a href="javascript:;">隐私政策</a>
+                XX<a href="javascript:;">网络营销</a></p>
+            <p>&copy;</p>
+        </div>
+    </div>
+</div>
+<!-- 轮播图 -->
+<script type="text/javascript">
+    (function (w, d) {
+        if (!Array.prototype.indexOf) {
+            Array.prototype.indexOf = function (ele) {
+                var arr = this;
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] == ele) return i;
+                }
+                return -1;
+            };
+        }
+        var util = {
+            each: function (_objects, _fn) {
+                for (var i = 0, len = _objects.length; i < len; i++) {
+                    _fn(_objects[i], i);
+                }
+            },
+            getByClassName: function (_parent, _class) {
+                if (!_parent) {
+                    return;
+                }
+                var list = _parent.getElementsByTagName('*');
+                var nodes = [];
+                this.each(list, function (_item) {
+                    if ((" " + _item.className + " ").indexOf(" " + _class + " ") != -1) {
+                        nodes.push(_item);
+                    }
+                });
+                return nodes;
+            },
+            hashChange: function (_fnArr, _init) {
+                var hash = w.location.hash.substring(1);
+                var that = this;
+                if (_init) {
+                    that.each(_fnArr, function (_fn, i) {
+                        _fn(w.location.hash.substring(1));
+                    });
+                    return;
+                }
+                if (('onhashchange' in w)
+                        && ((typeof d.documentMode === 'undefined')
+                        || w.documentMode == 8)) {
+                    w.onhashchange = function () {
+                        that.each(_fnArr, function (_fn, i) {
+                            _fn(w.location.hash.substring(1));
+                        });
+                    };
+                } else {
+                    setInterval(function () {
+                        var ischanged = hash != w.location.hash.substring(1);
+                        if (ischanged) {
+                            hash = w.location.hash.substring(1);
+                            that.each(_fnArr, function (_fn, i) {
+                                _fn(hash);
+                            });
+                        }
+                    }, 150);
+                }
+            }
+        };
+        w.util = util;
+    })(window, document);
+
+    (function (w, d) {
+        var tabItems = d.getElementById('tab').getElementsByTagName('li');
+        var subTabItems = d.getElementById('subtab').getElementsByTagName('li');
+        var tabCnts = util.getByClassName(d, 'j-fathercnt');
+        var subTabCnts = util.getByClassName(d, 'j-cnt');
+        var tabData = ["post", "know"];
+        var subTabData = ['develop', 'data', 'design', 'gongguan', 'market', 'business', 'operate', 'logistic'];
+        var page = {
+            init: function () {
+                util.hashChange([this.tabChange], true);
+                util.hashChange([this.tabChange]);
+            },
+            tabChange: (function () {
+                var doChangeTab = function (_index) {
+                    util.each(subTabItems, function (_item, _i) {
+                        _item.className = '';
+                        subTabCnts[_i].style.display = 'none';
+                    });
+                    util.each(tabItems, function (_item, _i) {
+                        _item.className = '';
+                        tabCnts[_i].style.display = 'none';
+                    });
+                    tabItems[_index].className = 'z-crt';
+                    if (_index !== 0) {
+                        tabCnts[_index].style.display = '';
+                    }
+                };
+                var doChangeSubTab = function (_index) {
+                    subTabItems[_index].className = 'z-crt';
+                    subTabCnts[_index].style.display = '';
+                };
+                return function (_hash) {
+                    var index = tabData.indexOf(_hash);
+                    if (index <= 0) {
+                        doChangeTab(0);
+                        index = subTabData.indexOf(_hash);
+                        var tabIndex = index != -1 ? index : 0;
+                        doChangeSubTab(tabIndex);
+                    } else {
+                        doChangeTab(index);
+                    }
+                }
+            })()
+        };
+        page.init();
+    })(window, document);
+</script>
+</body>
+</html>
