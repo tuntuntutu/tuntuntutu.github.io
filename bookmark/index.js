@@ -46,8 +46,7 @@ define(['../lib/vue.min', 'text!./bookmark.html'], function (Vue, bookmark) {
         },
         methods: {
             select: function (anchor) {
-                this.$data.anchors.map(item => {item.selected = false
-            })
+                this.$data.anchors.map(item => {item.selected = false})
                 anchor.selected = true;
                 this.$data.currentAnchor = anchor.title;
             }
