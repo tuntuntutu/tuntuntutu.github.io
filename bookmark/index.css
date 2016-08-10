@@ -1,3 +1,14 @@
-.m-bookmark{
+.m-bookmark {
 
+}
+
+.m-bookmark .navTitle li a{
+    color:#767676;
+    background: #fff;
+}
+
+.m-bookmark .navTitle li a:hover, .m-bookmark .navTitle li a:focus{
+    border-right: 1px solid #07712c;
+    color:#07712c;
+    background: #f7f7f7;
 }
