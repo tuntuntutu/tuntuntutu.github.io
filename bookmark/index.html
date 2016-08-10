@@ -30,27 +30,38 @@
         <span class="tt-icon tt-lg pull-left">Bookmark</span>
     </div>
 </main>
-<div class="container tt-content m-bookmark" id="bookmark">
+<div class="container tt-content m-bookmark" id="bookmark" v-show="hasReady">
     <div class="row">
         <div class="col-sm-2">
             <ul class="nav navTitle">
-                <li v-for="anchor in anchors">
-                    <a href="#{{anchor}}" class="btn">{{anchor}}</a>
-                </li>
+                    <li v-for="anchor in anchors">
+                        <a class="btn" :class="{'selected':anchor.selected}" href="#{{anchor.title}}"
+                           v-on:click="select(anchor)">{{anchor.title}}</a>
+                    </li>
             </ul>
         </div>
         <div class="col-sm-10">
             <ul class="nav m-navUrl">
-                <template v-for="bookmark in bookmarks">
-                    <li v-if="bookmark.father" class="col-sm-3">
-                        <a  :href="bookmark.url" title="{{bookmark.name}}" name="{{bookmark.father}}"><img
-                                src="{{bookmark.icon}}"/>
-                            <div class="name text-left">{{bookmark.name}}</div>
-                        </a>
-                    </li>
-                    <li v-else>
-                        <h3 class="title col-sm-12">{{bookmark.name}}</h3>
-                    </li>
+                <template  v-for="bookmark in bookmarks">
+                    <template v-if="showType==2">
+                        <li v-if="bookmark.father" class="col-sm-3 u-urlBox">
+                            <a :href="bookmark.url" title="{{bookmark.name}}" name="{{bookmark.father}}">
+                                <img src="{{bookmark.icon}}"/>
+                                <div class="name text-left">{{bookmark.name}}</div>
+                            </a>
+                        </li>
+                        <li v-else>
+                            <h3 class="title col-sm-12 text-center">{{bookmark.name}}</h3>
+                        </li>
+                    </template>
+                    <template v-else>
+                        <li v-if="currentAnchor==bookmark.father" class="col-sm-3 u-urlBox">
+                            <a :href="bookmark.url" title="{{bookmark.name}}">
+                                <img src="{{bookmark.icon}}"/>
+                                <div class="name text-left">{{bookmark.name}}</div>
+                            </a>
+                        </li>
+                    </template>
                 </template>
 
             </ul>
