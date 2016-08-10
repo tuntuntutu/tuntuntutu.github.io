@@ -42,8 +42,9 @@
         <div class="col-sm-10">
             <ul class="nav navUrl">
                 <li v-for="bookmark in bookmarks">
-                    <a name="{{bookmark.father}}" :href="bookmark.url" title="{{bookmark.name}}"> <img
+                    <a v-if="bookmark.father" :href="bookmark.url" title="{{bookmark.name}}"> <img
                             src="{{bookmark.icon}}">{{bookmark.name}}</a>
+                    <h3 v-else>{{bookmark.name}}</h3>
                 </li>
             </ul>
         </div>
