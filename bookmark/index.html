@@ -35,17 +35,24 @@
         <div class="col-sm-2">
             <ul class="nav navTitle">
                 <li v-for="anchor in anchors">
-                    <a href="#{{anchor}}">{{anchor}}</a>
+                    <a href="#{{anchor}}" class="btn">{{anchor}}</a>
                 </li>
             </ul>
         </div>
         <div class="col-sm-10">
-            <ul class="nav navUrl">
-                <li v-for="bookmark in bookmarks">
-                    <a v-if="bookmark.father" :href="bookmark.url" title="{{bookmark.name}}"> <img
-                            src="{{bookmark.icon}}">{{bookmark.name}}</a>
-                    <h3 v-else>{{bookmark.name}}</h3>
-                </li>
+            <ul class="nav m-navUrl">
+                <template v-for="bookmark in bookmarks">
+                    <li v-if="bookmark.father" class="col-sm-3">
+                        <a  :href="bookmark.url" title="{{bookmark.name}}" name="{{bookmark.father}}"><img
+                                src="{{bookmark.icon}}"/>
+                            <div class="name text-left">{{bookmark.name}}</div>
+                        </a>
+                    </li>
+                    <li v-else>
+                        <h3 class="title col-sm-12">{{bookmark.name}}</h3>
+                    </li>
+                </template>
+
             </ul>
         </div>
     </div>

@@ -20,6 +20,8 @@ define(['../lib/vue.min', 'text!./bookmark.html'], function (Vue, bookmark) {
             item.replace(/HREF+=\"(.+?)\"/, function (a, b) {
                 url = b;
             });
+            name=name.replace(/\n/,'');
+            name=name.replace(/\s{2,10}/,' ');
             if (icon && icon.length)json.icon = icon;
             json = {url: url, father: father, icon: icon, name: name};
             bookmarks.push(json);
