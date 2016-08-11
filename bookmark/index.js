@@ -3,50 +3,35 @@ require.config({
         text: "../lib/text"
     }
 });
-define(['../lib/vue.min', 'text!./bookmark.html'], function (Vue, bookmark) {
-    var father = '', bookmarks = [], anchors = [];
-    var util = {
-        getBookmarkData: function (html) {
-            html.replace(/\<H3[^>]*\>\s*?([^<]*)\<\/H3\>|\<A[^>]*\>\s*?([^<]*)\<\/A\>/gi, function (item, title, name) {
-                if (title) {
-                    if (father != title)anchors.push({title: title, selected: false});
-                    father = title;
-                    bookmarks.push({father: '', name: title});
-                    return;
-                }
-                if (name) {
-                    var json, icon = '', url = '';
-                    item.replace(/ICON+=\"(.+?)\"/, function (a, b) {
-                        icon = b || '';
-                    });
-                    item.replace(/HREF+=\"(.+?)\"/, function (a, b) {
-                        url = b || '';
-                    });
-                    name = name.replace(/\n/, '');
-                    name = name.replace(/\s{2,10}/, ' ');
-                    json = {url: url, father: father, name: name, icon: icon};
-                    bookmarks.push(json);
-                }
-            });
-            return {bookmarks: bookmarks, anchors: anchors}
-        }
+require(['../lib/vue.min', 'text!./bookmark.html', 'util', 'text!./cache.json'], function (Vue, bookmark, util, cache) {
+    var config = {
+        version: '1.0.2',
+        nest: true,
+        storeLocal: false,
+        showType: 'flow' //展示效果，是切换面板还是锚点
     };
-    var data = util.getBookmarkData(bookmark);
+    var data = config.nest && cache  && JSON.parse(cache) ? JSON.parse(cache).bookmarks : util.$getBookmarkData(bookmark, config);
     new Vue({
         el: "#bookmark",
         data: {
             bookmarks: data.bookmarks,
             anchors: data.anchors,
-            hasReady: true,
-            showType: 1,
-            currentAnchor:data.anchors[0].title
+            loading: false,
+            showType: config.showType,
+            currentAnchor: "",
+            isNest: config.nest
         },
-        created:function(){
-          this.$data.anchors[0].selected=true;
+        created: function () {
+            if (data.anchors && data.anchors.length) {
+                this.$data.anchors[0].selected = true;
+                this.$data.currentAnchor = data.anchors[0].title;
+            }
         },
         methods: {
             select: function (anchor) {
-                this.$data.anchors.map(item => {item.selected = false})
+                this.$data.anchors.map(item => {
+                    item.selected = false
+                });
                 anchor.selected = true;
                 this.$data.currentAnchor = anchor.title;
             }
