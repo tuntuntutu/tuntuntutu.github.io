@@ -33,7 +33,7 @@
         <span class="tt-icon tt-lg pull-left">Bookmark</span>
     </div>
 </main>
-<div  id="bookmark">
+<div id="bookmark">
     <div v-show="loading" class="text-center">
         <div class="u-loading">
             <div class="dot"></div>
@@ -54,19 +54,21 @@
                 </ul>
             </div>
             <div class="col-sm-10  m-navUrl">
-                <template v-if="isNest" v-for="bookmark in bookmarks">
-                    <ul v-if="currentAnchor==bookmark.father" class="nav">
-                        <li v-for="child in bookmark.children" class="col-sm-3 u-urlBox">
-                            <a :href="child.url" title="{{child.name}}">
-                                <img src="{{child.icon}}"/>
-                                <div class="name text-left">{{child.name}}</div>
-                            </a>
-                        </li>
-                    </ul>
-                </template>
-                <ul v-else class="nav">
+                <template v-if="isNest">
                     <template v-for="bookmark in bookmarks">
-                        <template v-if="showType=='flow'">
+                        <ul v-if="currentAnchor==bookmark.father" class="nav">
+                            <li v-for="child in bookmark.children" class="col-sm-3 u-urlBox">
+                                <a :href="child.url" title="{{child.name}}">
+                                    <img src="{{child.icon}}"/>
+                                    <div class="name text-left">{{child.name}}</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </template>
+                </template>
+                <template v-else>
+                    <ul v-if="showType=='flow'" class="nav">
+                        <template v-for="bookmark in bookmarks">
                             <li v-if="bookmark.father" class="col-sm-3 u-urlBox">
                                 <a :href="bookmark.url" title="{{bookmark.name}}" name="{{bookmark.father}}">
                                     <img src="{{bookmark.icon}}"/>
@@ -77,16 +79,17 @@
                                 <h3 class="title col-sm-12 text-center">{{bookmark.name}}</h3>
                             </li>
                         </template>
-                        <template v-else>
-                            <li v-if="currentAnchor==bookmark.father" class="col-sm-3 u-urlBox">
-                                <a :href="bookmark.url" title="{{bookmark.name}}">
-                                    <img src="{{bookmark.icon}}"/>
-                                    <div class="name text-left">{{bookmark.name}}</div>
-                                </a>
-                            </li>
-                        </template>
-                    </template>
-                </ul>
+                    </ul>
+                    <ul v-else  class="nav">
+                        <li v-for="bookmark in bookmarks" v-if="currentAnchor==bookmark.father"
+                            class="col-sm-3 u-urlBox">
+                            <a :href="bookmark.url" title="{{bookmark.name}}">
+                                <img src="{{bookmark.icon}}"/>
+                                <div class="name text-left">{{bookmark.name}}</div>
+                            </a>
+                        </li>
+                    </ul>
+                </template>
             </div>
         </div>
     </div>

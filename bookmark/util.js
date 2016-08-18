@@ -1,12 +1,13 @@
 define(function () {
     return {
-        $getBookmarkData: function (html, config) {
-            var version = config.version, isNest = config.nest, storeLocal = config.storeLocal;
-            var storage = JSON.parse(localStorage.getItem('bookmarks'));
-            if (storeLocal && storage && version == storage.version)return storage.bookmarks;
-            var data = isNest ? this.getNestBookmark(html) : this.getBookmarkJson(html);
-            localStorage.setItem('bookmarks', JSON.stringify({version: version, bookmarks: data}));
-            return data;
+        $getBookmarkData: function (html, isNest) {
+            return isNest ? this.getNestBookmark(html) : this.getBookmarkJson(html);
+        },
+        $getLocalStorage: function (name) {
+            return JSON.parse(localStorage.getItem(name));
+        },
+        $setLocalStorage: function (name, data) {
+            localStorage.setItem(name, data);
         },
         getBookmarkJson: function (html) {
             var father = '', bookmarks = [], anchors = [];
@@ -34,7 +35,7 @@ define(function () {
             return {bookmarks: bookmarks, anchors: anchors};
         },
         getNestBookmark: function (html) {
-            var father = '', bookmarks = [], anchors = [], f_Json={};
+            var father = '', bookmarks = [], anchors = [], f_Json = {};
             html.replace(/\<H3[^>]*\>\s*?([^<]*)\<\/H3\>|\<A[^>]*\>\s*?([^<]*)\<\/A\>/gi, function (item, title, name) {
                 if (title) {
                     if (father != title) {
