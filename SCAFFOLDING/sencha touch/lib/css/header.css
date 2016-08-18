@@ -1,0 +1,84 @@
+/*top 开始*/
+
+.m-hd-bj{
+    backgrounnd:#e5e5e5;
+    background-image: -webkit-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -moz-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -o-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    border: 0 !important;
+    border-bottom: 1px solid #ccc !important;
+    height:3.8em !important;
+ }
+
+.title-name .x-title{
+    font-size: 0.9em !important;
+    text-shadow: none !important;
+    font-weight: normal !important;
+    color:#146bb9 !important;
+    font-size: 18px !important;
+ }
+
+.title-name .x-innerhtml{margin:5px 0;}
+
+
+/*全景图top 开始*/
+
+.x-toolbar-dark .x-title {
+    /*color: #146bb9 !important;*/
+    text-shadow: none  !important;
+    font-weight: normal !important;
+    font-size: 18px !important;
+}
+
+
+
+/*返回 开始*/
+
+
+.Return-nav{ background: url(../images/Return-icon2.png) center top no-repeat; background-size:108%;   width: 2em !important;
+    height: 2em!important;}
+
+.Return-nav1{ background: url(../images/Return-icon3.png) center top no-repeat; background-size:108%;   width: 2em !important;
+    height: 2em !important;}
+
+/*.changIcon{*/
+    /*background: url(../images/change.png) center top no-repeat; background-size:108%;   width: 2em !important;*/
+    /*height: 2em!important;*/
+/*}*/
+
+/*add-icon开始*/
+
+.m-more-add {
+    background: url(../images/icon_nav_add.png) center top no-repeat;
+    background-size: 46%;
+    height: 33px !important;
+    width: 50px !important;
+    border: 1px #025bb3 solid;
+    border-radius: 0.3em;
+    -webkit-box-shadow: inset 0 1px 0 #6cb0f3, 0 1px 0 #358fe6;
+    box-shadow: inset 0 1px 0 #6cb0f3, 0 1px 0 #358fe6;
+}
+
+.m-tk-box {
+    padding: 0 !important;
+}
+
+.m-button-active {
+    color: #555;
+    padding: 7px 0;
+}
+
+
+.m-button-active:hover {
+    background: #eee;
+    color: #358fe6;
+    display: block;
+    padding: 7px 0;
+}
+
+.x-sheet-inner > .x-button, .x-sheet-action-inner > .x-button {
+    margin-bottom: 0.4em;
+    border-bottom: 1px solid #d2d2d2;
+    border-radius: 0;
+}

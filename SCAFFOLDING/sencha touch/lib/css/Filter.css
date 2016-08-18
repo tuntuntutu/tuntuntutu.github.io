@@ -1,0 +1,575 @@
+/*managerIndex-tab 开始*/
+body {
+    font-family: "Microsoft YaHei",'微软雅黑',Helvetica, Arial, sans-serif;
+    font-size:12px;
+    margin:0;
+    padding:0;
+}
+
+
+
+/*ipad样式开始*/
+
+.m-sx-but{ background: url(../images/Filter-nav.png) center top no-repeat; background-size:88%;}
+.m-sx-but1{ background: url(../images/Add1.png) center top no-repeat; background-size:88%;}
+.m-sx-but2{ background: url(../images/sign.png) center top no-repeat; background-size:88%;}
+
+/*筛选按钮样式开始*/
+.button-sx {
+    top:0px;
+    right:14px;
+    display:inline-block;
+    width:auto;
+    padding:4px 12px !important;
+    font-size:14px;
+    line-height:20px;
+    color:#fff;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius:0.3em;
+    border:1px #bbb solid !important;
+    -webkit-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -moz-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -o-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -ms-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    background-image: none !important;
+    background-color:  transparent !important;
+    background-image: -webkit-linear-gradient(top,  transparent, transparent 3%, transparent) !important;
+    background-image: -moz-linear-gradient(top,  transparent, transparent 3%, transparent) !important;
+    background-image: -o-linear-gradient(top,  transparent, transparent 3%, transparent) !important;
+    background-image: -ms-linear-gradient(top,  transparent0, transparent 3%, transparent) !important;
+}
+
+/*弹出框样式开始*/
+
+.m-Pop-up {
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: rgba(0,0,0,0.3) 0 0.2em 0.6em !important;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 0.2em 0.6em
+    box-shadow: rgba(0,0,0,0.3) 0 0.2em 0.6em !important;
+    background-image: none;
+    background-color: #fff !important;
+}
+
+
+.m-Pop-up > .x-dock{
+    margin:0px !important;
+}
+
+.m-pop-up-top {
+    backgrounnd:#e5e5e5;
+    background-image: -webkit-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -moz-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -o-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    border-bottom: 1px solid #ccc !important;
+    border-top-left-radius:0.3em;
+    border-top-right-radius:0.3em;;
+}
+
+.m-pop-up-top1 {
+    backgrounnd:#e5e5e5;
+    background-image: -webkit-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -moz-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -o-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    border-bottom: none !important;
+    border-top-left-radius:0.3em;
+    border-top-right-radius:0.3em;;
+}
+
+.m-input-border1{
+    margin:  0  0  0  10px !important;
+    padding: 0.4em !important;
+    min-height: 2.4em !important;
+}
+
+.m-input-border1 .x-component-outer {
+    box-shadow: none!important;
+    border: 1px solid #ccc;}
+
+.m-input-border1 .x-input-el{
+    padding:4px 0 4px 8px;
+    min-height: 2.4em;
+    border-width: 0;
+    -webkit-appearance: none;
+    -webkit-text-fill-color: #000;
+
+}
+
+
+.m-pop-up-but{
+    background-image: none;
+    background-color: transparent !important;
+    background-image: -webkit-linear-gradient(top, transparent,transparent,transparent) !important;
+    background-image: -moz-linear-gradient(top, transparent,transparent,transparent) !important;
+    background-image: -o-linear-gradient(top, transparent,transparent,transparent) !important;
+    background-image: -ms-linear-gradient(top, transparent,transparent) !important;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius:0.3em;
+    border:1px #bbb solid !important;
+    -webkit-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -moz-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -o-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -ms-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    color:#555 !important;
+    margin:7px 12px !important;
+    padding: 6px 11px !important;
+}
+
+.m-pop-up-top .x-button-pressing  > .x-button-label{
+    color: #555 ;
+}
+
+.m-pop-up-but > .x-button-label{
+    font-weight: normal !important;
+    line-height: 1.2em;
+    font-family: '微软雅黑' !important;
+    font-size:14px !important;
+    color: #555;
+}
+
+.m-pop-up-but-02{
+    background-image: none;
+    background-color: transparent !important;
+    background-image: -webkit-linear-gradient(top, transparent,transparent,transparent) !important;
+    background-image: -moz-linear-gradient(top, transparent,transparent,transparent) !important;
+    background-image: -o-linear-gradient(top, transparent,transparent,transparent) !important;
+    background-image: -ms-linear-gradient(top, transparent,transparent) !important;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius:0.3em;
+    border:1px #bbb solid !important;
+    -webkit-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -moz-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -o-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    -ms-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff;
+    color:#555 !important;
+    margin: 7px 0.65em !important;
+    padding: 6px 11px !important;
+}
+
+.m-pop-up-but-02 > .x-button-label{
+    font-weight: normal !important;
+    line-height: 1.2em;
+    font-family: '微软雅黑' !important;
+    font-size:14px !important;
+}
+
+
+
+/*弹出框样式02开始*/
+
+
+
+.m-pop-cof {
+
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: rgba(0,0,0,0.8) 0 0.2em 0.6em;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0 0.2em 0.6em;
+    box-shadow: rgba(0,0,0,0.8) 0 0.2em 0.6em;
+    background-image: none;
+    background-color: #fff !important;
+    padding: 5px !important;
+}
+
+.m-pop-cof .x-anchor{
+
+    background-color: #fff !important;
+
+}
+
+.m-pop-cof .x-innerhtml{
+
+    font-family: '微软雅黑' !important;
+    color:#333 !important;
+    font-size:14px !important;
+
+}
+
+
+
+/*单选样式开始*/
+.m-radio-button{
+    width:700px;
+}
+
+
+.m-radio-button .x-button{
+    background-image: none;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(top, #fff,#fff 3%,#fff) !important;
+    background-image: -moz-linear-gradient(top, #fff,#fff 3%,#fff) !important;
+    background-image: -o-linear-gradient(top, #fff,#fff 3%,#fff) !important;
+    background-image: -ms-linear-gradient(top, #fff,#fff 3%,#fff) !important;
+    border:1px #bbb solid !important;
+    color:#777 ;
+    border-radius:6em !important;
+    margin:0.4em 0.6em 0.4em 0 !important;
+    overflow: visible;
+    display:inline-block !important;
+    padding: 0.4em 1em !important;
+}
+
+
+
+.m-radio-button .x-button-pressed {
+    background-image: none;
+    background-color: #146bb9;
+    background-image: -webkit-linear-gradient(top, #146bb9,#146bb9 3%,#146bb9) !important;
+    background-image: -moz-linear-gradient(top, #146bb9,#146bb9 3%,#146bb9) !important;
+    background-image: -o-linear-gradient(top, #146bb9,#146bb9 3%,#146bb9) !important;
+    background-image: -ms-linear-gradient(top, #146bb9,#146bb9 3%,#146bb9) !important;
+    border:1px solid #146bb9 !important;
+    color:#fff;
+    border-radius:6em !important;
+    margin:0 0.6em 0 0 !important;
+    padding: 0.4em 1em !important;
+}
+
+
+.m-radio-button .x-button-label{
+    font-weight: normal !important;
+    line-height: 1.4em !important;
+    font-family: '微软雅黑' !important;
+    font-size: 14px !important;
+}
+
+/*单选样式开始02*/
+.m-radio-button-02{
+    margin: 0 auto;
+    padding: 10px  24px;
+    background: #fff;
+    border-bottom: 1px dashed #eee
+}
+
+.m-radio-button-03{
+    margin: 0 auto;
+    padding: 0.2em 1.4em;
+    background: #fff;
+    border-bottom: none !important;
+}
+
+
+.m-radio-button-02 .x-button{
+    background-image: none;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(top, #fff,#fff 3%,#fff) !important;
+    background-image: -moz-linear-gradient(top, #fff,#fff 3%,#fff) !important;
+    background-image: -o-linear-gradient(top, #fff,#fff 3%,#fff) !important;
+    background-image: -ms-linear-gradient(top, #fff,#fff 3%,#fff) !important;
+    border:1px #bbb solid !important;
+    color:#777 ;
+    border-radius:6em !important;
+    margin:0.4em 0.6em 0.4em 0 !important;
+    overflow: visible;
+    display:inline-block !important;
+    padding: 0.4em 1em !important;
+}
+
+.m-radio-button-02 .x-button-pressed {
+    background-image: none;
+    background-color: #146bb9;
+    background-image: -webkit-linear-gradient(top, #146bb9,#146bb9 3%,#146bb9) !important;
+    background-image: -moz-linear-gradient(top, #146bb9,#146bb9 3%,#146bb9) !important;
+    background-image: -o-linear-gradient(top, #146bb9,#146bb9 3%,#146bb9) !important;
+    background-image: -ms-linear-gradient(top, #146bb9,#146bb9 3%,#146bb9) !important;
+    border:1px solid #146bb9 !important;
+    color:#fff;
+    border-radius:6em !important;
+    margin:0 0.6em 0 0 !important;
+    padding: 0.4em 1em !important;
+}
+
+.m-radio-button-02 .x-button-label{
+    font-weight: normal !important;
+    line-height: 1.4em !important;
+    font-family: "Microsoft YaHei",'微软雅黑',Helvetica, Arial, sans-serif;
+    font-size: 14px !important;
+}
+
+/*input 边框样式开始*/
+
+.m-input-border {
+
+    margin: 0.8em 1em 0em !important;
+    min-height: 2.3em !important;
+}
+
+.order {
+    margin: 0 10px 0 0!important;
+    min-height: 2.3em !important;
+    border-bottom: 0 !important;padding-top: 14px !important;
+}
+
+.order02 {
+    margin: 0!important;
+    min-height: 2.3em !important;
+    border-bottom: 0 !important;padding-top: 14px !important;
+}
+
+/*待定*/
+.m-Pop-up  .x-input-el{
+    padding: 5px 0 0 35px ;
+    min-height: 2.5em;
+    border-width: 0;
+    -webkit-appearance: none;
+    -webkit-text-fill-color: #000;}
+
+.m-input-border .x-component-outer {
+    background:#fff !important;
+    border-radius:0.25em;
+    border: 1px #d3d4d4 solid !important;
+    margin-top: 1px;
+    color: #CCC!important;
+}
+
+.m-input-border0top12{
+    background:#fff !important;
+    border-radius: 0em;
+    border: 0px #d3d4d4 solid !important;
+    padding-top: 12px;
+    color: #CCC!important;
+}
+
+.x-form-label0000{
+    padding: 0 0 0 0;
+}
+
+.m-input-border03 .x-component-outer {
+    margin-left:3px;
+}
+
+.m-input-border .x-form-fieldset-title {
+    margin: 0.7em 0.4em 0.4em !important;
+    text-shadow: #fff 0 1px 1px;
+    font-weight: normal;
+    font-size:15px !important;
+}
+
+.m-input-border.x-form-fieldset .x-form-fieldset-inner {
+    border: 0  !important;
+    overflow: visible  !important;
+}
+
+
+.m-input-border .x-input-el {
+    min-height: 2.9em !important;
+    border-radius: 0.3em !important;
+    font-size: 14px;
+    padding: 13px 0.6em !important;
+    -webkit-appearance: none;
+    -webkit-text-fill-color: #555 !important;
+}
+
+
+
+
+.m-input-border-02 {
+
+    margin: 0.8em 1em 1.6em !important;
+}
+
+
+.m-input-border-02 .x-component-outer {
+    background:#fff !important;
+    border-radius:0.25em;
+    border: 1px #d3d4d4 solid !important;
+
+}
+
+.m-input-border-02 .x-form-fieldset-title {
+    margin: 0.7em 0.4em 0.4em !important;
+    text-shadow: #fff 0 1px 1px;
+    font-weight: normal;
+    font-size:15px !important;
+}
+
+.m-input-border-02 .x-form-fieldset .x-form-fieldset-inner {
+    border: 0  !important;
+    overflow: visible  !important;
+}
+
+
+.m-input-border-02 .x-input-el {
+    min-height: 2.9em !important;
+    border-radius: 0.3em !important;
+    padding: 0.4em 0.6em !important;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -webkit-text-fill-color: #555 !important;
+}
+
+.m-text-input{
+    border-radius: 0.25em;
+    font-size: 14px !important;
+}
+
+input, textarea, select {
+    font-family: "Microsoft YaHei",'微软雅黑',Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color:#696969 !important;
+}
+
+.m-zcbu-box .x-form-fieldset-title {
+    margin: 0.0em 0.4em 0.4em !important;
+    text-shadow: #fff 0 1px 1px;
+    font-weight: normal;
+    font-size:15px !important;
+}
+
+
+/*关闭样式开始*/
+
+.m-gb-but{ background: url(../images/Close.png) center top no-repeat; background-size:88%;}
+
+.button-gb {
+    top:0px;
+    right:4px;
+    display:inline-block;
+    width:auto;
+    padding:4px 12px !important;
+    font-size:14px;
+    line-height:20px;
+    color:#fff;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius:0.3em;
+    border:0 !important;
+    -webkit-box-shadow:none !important;
+    -moz-box-shadow:none !important;
+    -o-box-shadow:none !important;
+    -ms-box-shadow:none !important;
+    box-shadow:none !important;
+    box-shadow:none !important;
+    background-image: none !important;
+    background-color:  transparent !important;
+    background-image: -webkit-linear-gradient(top,  transparent, transparent 3%, transparent) !important;
+    background-image: -moz-linear-gradient(top,  transparent, transparent 3%, transparent) !important;
+    background-image: -o-linear-gradient(top,  transparent, transparent 3%, transparent) !important;
+    background-image: -ms-linear-gradient(top,  transparent0, transparent 3%, transparent) !important;
+}
+
+.m-text-line{
+    margin:8px 4px 0px 4px; color:#999;;
+}
+
+
+
+/*心号 开始*/
+
+.m-xh{
+    font-size:1em !important;
+    color:#ff0000;
+
+}
+
+
+/*控件css 开始*/
+
+.m-time-control{
+    padding: 0.7em;
+    border-top: 0;
+    background-color: #fefefe !important;
+    background-image: -moz-linear-gradient(top, #fefefe, #fefefe 3%, #fefefe) !important;
+    background-image: -ms-linear-gradient(top, #fefefe, #fefefe 3%, #fefefe) !important;
+    background-image: -webkit-linear-gradient(top,#fefefe, #fefefe 3%, #fefefe) !important;
+    box-shadow: 0 0 0.4em !important;
+    border-radius: 0.3em !important;
+}
+
+.m-time-control .x-toolbar-dark{
+    backgrounnd:#e5e5e5;
+    background-image: -webkit-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -moz-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    background-image: -o-linear-gradient(top, #f9f9f9, #f9f9f9 3%, #e5e5e5);
+    border: 0 !important;
+    border-top: 1px solid #f9f9f9 !important;
+    border-bottom: 1px solid #bbb !important;
+}
+
+.m-button-ct{    -webkit-border-radius:6px !important;
+    border-radius:6px !important;
+    background:#f2f2f2 !important;
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e6e6e6)) !important;
+    background-image:linear-gradient(#f2f2f2, #e6e6e6) !important;
+    border:1px #bababe solid !important;
+    -webkit-box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff !important;
+    box-shadow:inset 0 1px 0 #fff, 0 1px 0 #fff !important;
+    border: 1px solid #bbb !important;
+    border-top-color: #c1c1c5 !important;
+    background-color: #c1c1c5 !important;
+    color: #222 !important;
+    min-height: 1.4em !important;
+    padding: 6px 12px !important;
+    font-size: 1.2em;
+}
+
+.m-button-ct .x-button-label{
+    font-weight: normal !important;
+    font-family: "Microsoft YaHei",'微软雅黑',Helvetica, Arial, sans-serif;
+    font-size: 14px !important;
+    color: #222 !important;
+}
+
+
+.m-time-control .x-picker-inner {
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0.7em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbbbbb), color-stop(30%, white), color-stop(70%, white), color-stop(100%, #bbbbbb)) !important;
+    background: -webkit-linear-gradient(top, #bbbbbb 0%, white 30%, white 70%, #bbbbbb 100%) !important;
+    background: -moz-linear-gradient(top, #bbbbbb 0%, white 30%, white 70%, #bbbbbb 100%) !important;
+}
+
+.m-time-control .x-picker-slot {
+    border-left: 1px solid #b6b6b6 !important;
+    border-radius: 0.3em;
+}
+
+.m-time-control .x-picker-bar {
+    border-top: 1px solid #a1a1a1;
+    border-bottom: 1px solid #a1a1a1;
+    padding: 4px 10px;
+    height: 2.5em;
+    box-shadow: 0px 0.2em 0.2em rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 219, 213, 0.2);
+    background-image: -moz-linear-gradient(center top , rgba(220, 233, 246, 0.1), rgba(220, 233, 246, 0.1) 3%, rgba(220, 233, 246, 0.1));
+    background-image: -webkit-linear-gradient( top ,rgba(220, 233, 246, 0.1), rgba(220, 233, 246, 0.1) 3%, rgba(220, 233, 246, 0.1));
+}
+
+.m-time-control .x-picker-slot .x-picker-item{
+    text-align: center;
+}
+

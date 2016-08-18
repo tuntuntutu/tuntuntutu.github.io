@@ -1,0 +1,89 @@
+/*快捷操作 开始*/
+
+.m-fast-box {
+    background: #fff !important;
+    padding: 12px !important;
+    margin: 0 0 12px 0 !important;
+    border-bottom: 1px solid #ddd  !important;
+}
+
+.m-fast .x-form-fieldset .x-form-fieldset-inner {
+    border: 0 !important;
+}
+
+.m-fast-box .x-innerhtml {
+    font-size: 16px;
+    width: 140px;
+    height: 46px;
+    padding: 3px 12px 3px 0;
+    line-height: 20px;
+    text-align: center;
+    word-wrap:break-word !important;
+    overflow:hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: normal !important;
+    vertical-align: middle !important;
+    color: #146bb9;
+    background: url(../images/xt-02.png) right center no-repeat;
+    padding-right: 14px;
+
+}
+
+.m-fast-box02 {
+    background: #fff !important;
+    padding: 12px !important;
+    margin: 0 0 12px 0 !important;
+    border-bottom: 1px solid #ddd  !important;
+}
+
+.m-fast-box02 .x-innerhtml {
+    font-size: 16px;
+    line-height: 32px;
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #146bb9;
+    padding-right: 14px;
+
+}
+
+.m-cpyy-icon .x-button-label, .x-badge, .x-hasbadge .x-badge {
+    font-weight: normal !important;
+    line-height: 1.2em !important;
+    font-family: "Microsoft YaHei", '微软雅黑', Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+}
+
+.m-table-03 img {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 0.6em !important;
+    vertical-align: middle;
+}
+
+.m-xt {
+    background: url(../images/xt-02.png) right center no-repeat;
+}
+
+
+.m-Sale-no p {
+color:#999;
+}
+
+
+
+/*合同信息 开始*/
+
+.m-agreement .x-innerhtml {
+    padding: 12px !important;
+}
+
+/*客户交易 开始*/
+.m-transaction .x-innerhtml {
+    padding: 0 !important;
+}
+
+.m-Panorama-box .x-list {
+    background-color: #eee;
+}

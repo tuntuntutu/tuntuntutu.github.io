@@ -1,0 +1,67 @@
+/*微名片*/
+.head_card {
+    height:40%;
+    background: -moz-linear-gradient(#fff, #333);
+    background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#333));
+    background: -webkit-linear-gradient(#fff, #333);
+    background: -o-linear-gradient(#fff, #333);
+    background: -ms-linear-gradient(#fff, #333);
+    /*background: linear-gradient(#fff, #333);*/
+    background:linear-gradient(45deg,#FF7F66,#E6A482 50%,#EDECCB)
+}
+.phoneButton_card_left{
+    margin-top:20px !important;
+    margin-right:20px !important;
+    background-color:#ED8368 !important ;
+}
+.phoneButton_card_center{
+    /*background-color:#ED8368 !important ;*/
+}
+.phoneButton_card_right{
+    margin-top:20px !important;
+    margin-left:20px !important;
+    background-color:#ED8368 !important ;
+}
+.theNavButton{
+    border-radius:0;
+    padding:0;
+    height:50px;
+    background-color:#F8AC8F !important;
+    margin:1px;
+    margin-bottom:0;
+    color:#F6F8F3 !important;
+}
+.theNavButton .theNavButton_font{
+    color:#5d362e;
+}
+
+.m-nav-active .theNavButton_font{
+    color:#F6F8F3;
+}
+.head_pic{
+    background: url(../images/person.png)  no-repeat;
+        /*width:80px !important;*/
+        /*height:80px !important;*/
+    background-size: 100%;
+}
+.wewm_pic{
+    background: url(../images/wewm.png)  no-repeat;
+    width:17px !important;
+    height:17px !important;
+    background-size: 100%;
+}
+.heart_pic{
+    background: url(../images/heart.png)  no-repeat;
+    width:17px !important;
+    height:17px !important;
+    background-size: 100%;
+}
+.add_pic{
+    background: url(../images/add.png)  no-repeat;
+    width:20px !important;
+    height:20px !important;
+    background-size: 100%;
+}
+.info_textfield{
+    font-size: 14px !important;
+}
