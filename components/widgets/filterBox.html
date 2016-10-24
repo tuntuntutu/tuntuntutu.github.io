@@ -1,0 +1,46 @@
+<div class="navbar-form">
+        <div>
+            <div class="form-group">
+
+                <div class="input-group">
+                    <div class="input-group-addon">商品名称</div>
+                    <input class="form-control" placeholder="请输入商品名称" v-model={{condition.goodsName}}>
+                </div>
+                <label>商品名称
+                    <input class="form-control" placeholder="请输入商品名称" v-model={{condition.goodsName}}>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="sr-only">状态
+                    <select type="password" class="form-control">
+                        <option value="">请选择状态</option>
+                        <option value="">未发布</option>
+                        <option value="">已发布</option>
+                    </select>
+                </label>
+            </div>
+            <span class="form-control-static">(提示文案)</span>
+        </div>
+        <div>
+            <div class="checkbox" v-for="item in provinces">
+                <label>
+                    <input type="checkbox" v-model="{{item.checked}}" value="{{item.id}}">{{item.name}}
+                </label>
+            </div>
+            <div class="radio"  v-for="item in provinces">
+                <label>
+                    <input type="radio" name="province" v-model="condition.province" :value="{{item.id}}">{{item.name}}
+                </label>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+
+                    <input class="form-control" type="email">
+                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">搜索</button>
+        </div>
+</div>

@@ -1,0 +1,36 @@
+<!--左右tab-->
+<div class="m-tabBox">
+    <div class="tab">
+        <template v-for="item in tabList">
+            <h2 @click='item.isShowSub=!item.isShowSub'>
+                <i class="glyphicon"
+                   v-bind:class="{'glyphicon-chevron-up':item.isShowSub,'glyphicon-chevron-down':!item.isShowSub}"></i>
+                <span class="title">{{item.title}}</span>
+            </h2>
+            <ul class="nav nav-pills nav-stacked" v-if="item.isShowSub">
+                <li v-for="sub in item.subList">
+                    <a @click='tabChange(sub,"tab1_type","tab1_tpl")' class="btn btn-default"
+                       v-bind:class="{'active':tab1_type==sub.type}">{{sub.name}}</a></li>
+            </ul>
+        </template>
+    </div>
+    <div class="right">
+        {{tab1_tpl}}
+    </div>
+</div>
+
+<!--上下tab-->
+<hr/>
+<ul class="nav nav-tabs">
+    <li v-for="item2 in tabList[0].subList" v-bind:class="{'active': tab2_type==item2.type}">
+        <a @click='tabChange(item2,"tab2_type","tab2_tpl")' href="javascript:;">{{item2.name}}</a>
+    </li>
+</ul>
+<hr/>
+<ul class="nav nav-pills">
+    <li v-for="item3 in tabList[0].subList">
+        <button v-bind:class="{'active': tab3_type==item3.type}" class="btn btn-default"
+                @click='this.tabChange(item3,"tab3_type","tab3_tpl")'>{{item3.name}}
+        </button>
+    </li>
+</ul>

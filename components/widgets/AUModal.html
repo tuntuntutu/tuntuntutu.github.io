@@ -1,0 +1,110 @@
+<div class="form-horizontal">
+    <div class="form-group" v-if="noTimeParam">
+        <label class="col-sm-2 control-label">开始时间：</label>
+
+        <div class="col-sm-4">
+            <div class="input-group">
+                <input readonly type="text" value={auModal.beginTime}
+                       on-click={this.setTime($event,auModal,'beginTime')}
+                       class="form-control"/>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
+        </div>
+        <label class="col-sm-2 control-label">结束时间：</label>
+
+        <div class="col-sm-4">
+            <div class="input-group">
+                <input readonly type="text" value={auModal.endTime} on-click={this.setTime($event,auModal,'endTime')}
+                       class="form-control"/>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">选择榜单：</label>
+
+        <div class="col-sm-4">
+            <select v-model="auModal.rankListType" class="form-control">
+                <option v-for="item in provinces" v-bind:value="item.id">{{item.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">选择地区：</label>
+
+        <div class="col-sm-10">
+            <div class="radio-inline" v-for="item in provinces">
+                <label>
+                    <input type="radio" name="province" v-model="auModal.province" v-bind:value="item.id">{{item.name}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">选择商品：</label>
+
+        <div class="col-sm-10">
+            <div class="checkbox-inline" v-for="item in provinces">
+                <label>
+                    <input type="checkbox" name="province" v-model="item.checked" v-bind:value="item.id">{{item.name}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="m-modalListItem" v-for="item in auModal.list">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">第{{item_index+1}}个：</label>
+
+            <div class="col-sm-10 text-right">
+                <button class="btn btn-danger btn-xs glyphicon glyphicon-remove removeBtn"
+                        @click="removeItem(auModal.list,item_index,true)">
+                </button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"><span class="f-necessary">*</span>指定位置：</label>
+
+            <div class="col-sm-4">
+                <input type="text" class="form-control" v-model="item.index"/>
+            </div>
+            <div class="col-sm-6 f-tips form-control-static">
+                输入N，表示显示在第N名后面
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"><span class="f-necessary">*</span>头图：</label>
+
+            <div class="col-sm-4">
+                <label class="btn btn-primary" @upload="imgUplad(headImg)"  data-imgsize="800*800"  data-param="isAllowPng=1" >上传图片（800*800）</label>
+            </div>
+            <div class="col-sm-6 f-tips form-control-static">
+                <img src="http://haitao.nosdn5.127.net/ip5i3iw710_700_200.jpg" alt="头图" width="100px"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"><span class="f-necessary">*</span>商品ID：</label>
+
+            <div class="col-sm-4">
+                <input type="text" class="form-control" v-model="item.cacheId" v-bind:value="item.goodsId"/>
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-primary glyphicon glyphicon-refresh" @click="refreshGoods(item.cacheId,item)"></button>
+            </div>
+            <div class="col-sm-1">{{auModal.errorMsg}}</div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"><span class="f-necessary">*</span>商品名称：</label>
+
+            <div class="col-sm-4">
+                <input type="text" class="form-control" v-model="item.goodsTitle"/>
+            </div>
+            <label class="col-sm-2 control-label"><span class="f-necessary">*</span>十字描述：</label>
+
+            <div class="col-sm-4">
+                <input type="text" class="form-control" v-model="item.introduce"/>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-success glyphicon glyphicon-plus" @click="addItem(auModal.list)"></button>
+</div>
