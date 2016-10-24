@@ -5,20 +5,20 @@ require.config({
 });
 require(['../lib/vue.min', 'text!./bookmark.html', 'util', 'text!./cache.json'], function (Vue, bookmark, util, cache) {
     var config = {
-        version: '1.0.4',
+        version: '1.0.6',
         nest: true,
         storeLocal: false,
         showType: 'anchor' //展示效    果，是切换面板还是锚点
     }, data;
-    var storage = util.$getLocalStorage('bookmark');
-    if (storage && storage.nest == config.nest && config.version == storage.version) {
-        data = storage;
+    var local = util.$getLocalStorage('bookmark');
+    if (local && local.nest == config.nest && local.version== config.version ) {
+        data = local;
     } else {
         util.$setLocalStorage('bookmark', null);
         var result = cache && JSON.parse(cache);
         data = config.nest && result ? result.bookmarks : util.$getBookmarkData(bookmark, config.nest);
-        data.version=config.version;
-        data.nest=config.nest;
+        data.version = config.version;
+        data.nest = config.nest;
         util.$setLocalStorage('bookmark', JSON.stringify(data));
     }
     new Vue({
