@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>2048</title>
+    <link rel="stylesheet" href="../css/common.css"/>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/2048.css"/>
 </head>
 <body>
-<header>
+<header class="tt2048-title">
     <h1>2048</h1>
     <div>(目前只支持移动端，pc可以打开手机调试模式)</div>
     <button id="newGame" class="u-btn newBtn">NEW GAME</button>
@@ -31,6 +32,7 @@
     <span class="u-grid" id="grid-2-3"></span>
     <span class="u-grid" id="grid-3-3"></span>
 </div>
+<a href="/" class="tt-back"></a>
 <script src="lib/jquery.js"></script>
 <script src="js/util.js"></script>
 <script src="js/position.js"></script>

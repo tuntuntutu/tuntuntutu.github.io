@@ -11,11 +11,11 @@
         </div>
     </div>
     <div class="col-md-3">
-        <div class="m-navs">
-            <ul class="nav nav-pills nav-stacked">
-                <li  v-for="wt in widgets">
-                    <button :class="{'active':wt.current}" @click="nav(wt)" class="btn btn-default btn-block">{{wt.name}}</button>
-                </li>
+        <div class="tt-nav">
+            <ul class="list-group">
+                <a href="javascript:;" v-for="wt in widgets" class="list-group-item"  @click="nav(wt)" :class="{'active':wt.current}">
+                    {{wt.name}}
+                </a>
             </ul>
         </div>
     </div>

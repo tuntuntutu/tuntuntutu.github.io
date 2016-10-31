@@ -14,41 +14,35 @@ require([
     var widgets = [
         {
             name: "按钮",
-            desc: "根据不同场景准确使用不同颜色不同大小的button有助于使用者快速理解button的含义，比如删除就用btn-danger。虽然按钮类能用在诸如a、span等标签上，但强烈建议尽可能使用 button 元素来获得在各个浏览器上获得相匹配的绘制效果",
+            wName: "buttonBox",
             html: Button,
             current: true
         }
         , {
-            name: "列表筛选",
+            name: "列表控件",
             wName: "filterBox",
-            desc: "作为列表上方用于筛选：" +
-            "<ul>" +
-            "<li>外层的navbar-form类可以替换成form-inline，前者会有一些margin、padding的变化，后者是空白样式，只影响子元素。</li>" +
-            "<li>如果想不显示label内容可以为其加上sr-only类</li>" +
-            "<li>两种有label视觉效果的文本输入框，感觉第一种漂亮</li>" +
-            "</ul>",
-            html: FilterBox
+            html: FilterBox,
+            current: false
         }
         , {
-            name: "tab切换",
+            name: "tab",
             wName: "tab",
-            desc: "简单的tab切换：" +
-            "<ul>" +
-            "<li>左右结构</li>" +
-            "<li>上下结构</li>" +
-            "</ul>",
-            html: Tab
+            html: Tab,
+            current: false
         }
         , {
-            name: "弹窗布局",
+            name: "列表增删",
             wName: "auModal",
-            desc: "",
-            html: AUModal
+            html: AUModal,
+            current: false
         }
     ];
     widgets.forEach(function (item) {
         item.code = hljs.highlight('html', item.html).value;
     });
+    Vue.component('buttonBox', Vue.extend({
+        template: Button
+    }));
     Vue.component('filterBox', Vue.extend({
         template: FilterBox,
         props: ['provinces']

@@ -1,8 +1,9 @@
-.m-tabBox .right{
+.m-tabBox .right {
     min-height: 150px;
 }
-.u-highlight{
-    margin-top:-1px;
+
+.u-highlight {
+    margin-top: -1px;
     margin-right: 0;
     margin-left: 0;
     border: 1px solid #e1e1e8;
@@ -10,11 +11,20 @@
     border-bottom-left-radius: 4px;
     background-color: #f7f7f9;
 }
-pre{
-    border:0;
+
+pre {
+    border: 0;
     background-color: transparent;
 }
-.m-navs{
+
+
+
+.tt-nav {
     position: fixed;
-    top:20px;
+    top: 100px;
+}
+
+.tt-nav .list-group-item.active, .tt-nav .list-group-item.active:focus, .tt-nav .list-group-item.active:hover {
+    background: #5dd46d;
+    border-color: #5dd46d;
 }

@@ -16,29 +16,29 @@
 }
 /*布局*/
 /*模块*/
-header {
+.tt2048-title {
   margin: 40px auto 0;
   text-align: center;
 }
-header h1 {
+.tt2048-title h1 {
   font-size: 30px;
   color: black;
 }
-header .newBtn {
+.tt2048-title .newBtn {
   margin: 20px;
   border-radius: 10px;
   background-color: #8f7a66;
   color: white;
 }
-header .newBtn:hover {
+.tt2048-title .newBtn:hover {
   background-color: #9f8b77;
 }
-header h2 {
+.tt2048-title h2 {
   text-align: center;
   font-size: 20px;
   color: #B8AF9E;
 }
-header h2 .score {
+.tt2048-title h2 .score {
   display: inline-block;
   width: 100px;
 }
