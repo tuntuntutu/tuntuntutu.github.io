@@ -1,0 +1,5 @@
+<div class="u-rButton {{class}}" @click="clickRButton" v-el:rButton>
+    <span class="buttonText">{{text||'请点击我'}}</span>
+    <span class="ripple" v-el:ripple v-bind:class="{'animate':isShowAnimate}"
+          v-bind:style="{left:location.x+'px',top:location.y+'px'}" ref="ripple"></span>
+</div>
