@@ -8,10 +8,11 @@ require([
     'text!./tpl.html'
     , 'text!./widgets/button.html'
     , 'text!./widgets/rippleButton.html'
+    , 'text!./widgets/toggle.html'
     , 'text!./widgets/filterBox.html'
     , 'text!./widgets/tab.html'
     , 'text!./widgets/AUModal.html'
-], function (Vue, tpl, Button,RippleButton, FilterBox, Tab, AUModal) {
+], function (Vue, tpl, Button,RippleButton,Toggle, FilterBox, Tab, AUModal) {
     var widgets = [
         {
             name: "普通按钮",
@@ -23,6 +24,11 @@ require([
             name: "涟漪按钮",
             wName: "rippleButton",
             html: RippleButton,
+            current: false
+        }, {
+            name: "切换开关",
+            wName: "toggle",
+            html: Toggle,
             current: false
         }
         , {
@@ -72,6 +78,14 @@ require([
                     this.isShowAnimate=true;
                     this.$emit('click');
                 }.bind(this),100)
+            }
+        }
+    }));
+    Vue.component('toggle', Vue.extend({
+        template: Toggle,
+        data(){
+            return {
+                value: true
             }
         }
     }));

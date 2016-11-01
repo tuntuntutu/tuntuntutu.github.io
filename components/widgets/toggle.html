@@ -1,0 +1,8 @@
+<div class="u-toggle btn" @click="value =! value"
+     v-bind:class="{'btn-primary':value,'btn-default':!value,'off':!value}">
+    <div class="toggleGroup">
+        <label class="btn btn-primary toggleOn">On</label>
+        <label class="btn btn-default active toggleOff">Off</label>
+        <span class="btn btn-default toggleHandle"></span>
+    </div>
+</div>
