@@ -1,5 +1,5 @@
 <template>
-  <div class="tt-menu" r-class="{{'navbar-static-top':isTop,'navbar-fixed-top':!isTop}}">
+  <div class="tt-menu" v-bind:class="{'navbar-static-top':isTop,'navbar-fixed-top':!isTop}">
     <div class="container">
       <div class="navbar-header logo">
         <a href="/htm/index.html" class="navbar-brand">TT-C</a>
@@ -24,7 +24,13 @@
   </div>
 </template>
 <script>
-  export default{};
+  export default{
+    data() {
+      return {
+        isTop: true,
+      };
+    },
+  };
 </script>
 <style scoped>
   .tt-menu {

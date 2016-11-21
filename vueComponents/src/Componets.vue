@@ -10,8 +10,8 @@
 
           <component :is="wt.wName" :provinces="provinces"></component>
 
-          <div class="u-highlight" v-highlight>
-            <pre><code class="html" v-html="wt.html"></code></pre>
+          <div class="u-highlight">
+            <pre><code class="html " v-html="wt.code"></code></pre>
           </div>
         </div>
       </div>
@@ -34,6 +34,8 @@
   import menuTop from './wrap/head';
   import rButton from './components/rippleButton';
   import toggle from './components/toggle';
+  require('./assets/solarized_dark.min.css');
+
 
   const w = [
     {
@@ -49,7 +51,7 @@
     },
   ];
   w.forEach((item) => {
-    item.code = item.html;
+    item.code = Hljs.highlight('html', item.html).value;
   });
   export default {
     data() {
@@ -68,12 +70,6 @@
           item.current = false;
         });
         wt.current = true;
-      },
-    },
-    directives: {
-      highlight: function () {
-        const blocks = this.el.querySelectorAll('pre code');
-        Array.prototype.forEach.call(blocks, Hljs.highlightBlock);
       },
     },
   }

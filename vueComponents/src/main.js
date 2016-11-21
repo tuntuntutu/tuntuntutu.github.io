@@ -2,7 +2,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import componets from './Componets.vue';
 import home from './Home.vue';
-require('./lib/solarized_dark.min.css');
 
 const App = Vue.extend({});
 
