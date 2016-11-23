@@ -6,7 +6,7 @@
         <span class="tt-icon tt-lg">Tuntun&Tutu</span>
         <p class="line describe">Just show some demo and breeds an product for my unborn baby Named Tuntun</p>
         <p class="line bookmark">
-          <a href="./bookmark/index.html" class="btn btn-lg tt-inline">Bookmark</a>
+          <a href="/bookmark/index.html" class="btn btn-lg tt-inline">Bookmark</a>
         </p>
         <p class="line pull-right"><span class="glyphicon glyphicon-btc"></span>Tutu will be the 2rd baby</p>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="m-components">
     <menu-top></menu-top>
     <div class="container">
       <div class="col-md-9" role="main">
@@ -76,13 +76,36 @@
   ;
 </script>
 
-<style scoped>
+<style>
+  .m-components .tt-menu {
+    background-color: #5dd46d;
+    color: #fff;
+  }
+
+  .m-components .tt-menu .navbar-brand {
+    color: #fff;
+  }
+
+  .m-components .tt-menu .navbar-nav > li > a,
+  .m-components .tt-menu .navbar-nav > li > a:hover,
+  .m-components .tt-menu .navbar-nav > .active > a:hover {
+    color: #fff;
+    background: #5dd46d;
+  }
+
+  .m-components .tt-menu .navbar-nav > .active > a,
+  .m-components .tt-menu .navbar-nav > li > a:hover,
+  .m-components .tt-menu .navbar-nav > .active > a:hover {
+    background: #4ac94a;
+  }
   .tt-nav {
     position: fixed;
     top: 100px;
   }
 
-  .tt-nav .list-group-item.active, .tt-nav .list-group-item.active:focus, .tt-nav .list-group-item.active:hover {
+  .tt-nav .list-group-item.active,
+  .tt-nav .list-group-item.active:focus,
+  .tt-nav .list-group-item.active:hover {
     background: #5dd46d;
     border-color: #5dd46d;
   }
