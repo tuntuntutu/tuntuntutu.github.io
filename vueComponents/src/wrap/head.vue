@@ -18,6 +18,10 @@
           <li>
             <a href='/2048/index.html'>2048</a>
           </li>
+          </li>
+          <li>
+            <a href='/transform/index.html'>Animation</a>
+          </li>
         </ul>
       </nav>
     </div>
