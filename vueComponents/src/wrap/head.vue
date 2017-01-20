@@ -2,7 +2,7 @@
   <div class="tt-menu" v-bind:class="{'navbar-static-top':isTop,'navbar-fixed-top':!isTop}">
     <div class="container">
       <div class="navbar-header logo">
-        <a href="/htm/index.html" class="navbar-brand">TT-C</a>
+        <a href="/index.html" class="navbar-brand">TT-C</a>
       </div>
       <nav>
         <ul class="nav navbar-nav">
