@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style type="text/css">
+        #myCanvas {
+            z-index: 2;
+            position: absolute;
+            left: 0px;
+            top: -5px;
+        }
+
+        #background {
+            z-index: 1;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body onLoad="preperation()">
+<canvas id="myCanvas" width="900" height="600">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+<canvas id="background" width="1600" height="700"></canvas>
+<script>
+    var col = new Array("red", "brown");
+    var ticker = 0;
+    var step = 0;
+    function drawBackground() {
+        var g = document.getElementById("background").getContext("2d");
+        var grd = g.createLinearGradient(-560 + ticker, 0, 1400 + ticker, 0);
+        for (var i = 0; i < 10; i++)
+            grd.addColorStop(i / 10, col[(i + step) % col.length]);
+        ticker = ticker + 10;
+        if (ticker >= 196) {
+            ticker = 0;
+            step++;
+        }
+        g.fillStyle = grd;
+        g.fillRect(0, 0, 1600, 700);
+    }
+
+    function preperation() {
+        setInterval('drawBackground()', 100);
+    }
+    var x = [0, 12, 54, 18, 28, 0, -28, -18, -54, -12, 0];    //五角星样品坐标xx数组
+    var y = [-53, -17, -17, 1, 45, 19, 45, 1, -17, -17, -53]; //五角星样品坐标y数组
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d"); //获得画笔
+
+    function star(a, b, locationX, locationY, f, rotation) {
+        ctx.save();
+        ctx.translate(locationX, locationY);
+        ctx.rotate(rotation * Math.PI / 180.0);
+        ctx.beginPath();
+        ctx.moveTo(Math.round(a[0] * f), Math.round(b[0] * f));
+        for (var i = 1; i < a.length; i++)
+            ctx.lineTo(Math.round(a[i] * f), Math.round(b[i] * f));
+        ctx.closePath();
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.restore();//还原画图（画笔）的初始环境
+    }
+    star(x, y, 165, 165, 1.4, 0);//画大五角星
+    star(x, y, 301, 65, 0.5, 30);//画小五角星
+    star(x, y, 362, 126, 0.5, -30);//画小五角星
+    star(x, y, 359, 216, 0.5, 0);//画小五角星
+    star(x, y, 301, 273, 0.5, 30);//画小五角星
+</script>
+</body>
+</html>

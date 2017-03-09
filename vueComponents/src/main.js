@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import componets from './Componets.vue';
-import home from './Home.vue';
 
 const App = Vue.extend({});
 
@@ -9,10 +8,6 @@ Vue.use(VueRouter);
 const router = new VueRouter();
 router.map({
   '/index': {
-    name: 'index',
-    component: home,
-  },
-  '/components': {
     name: 'new',
     component: componets,
   },

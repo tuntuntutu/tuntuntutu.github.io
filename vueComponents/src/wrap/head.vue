@@ -7,20 +7,10 @@
       <nav>
         <ul class="nav navbar-nav">
           <li>
-            <a v-link="{path:'/'}">TUNTUN</a>
-          </li>
-          <li>
-            <a href='/recruit/index.html'>Recruit</a>
+            <a href="../../index.html">TUNTUN</a>
           </li>
           <li>
             <a v-link="{path:'/components'}">Components</a>
-          </li>
-          <li>
-            <a href='/2048/index.html'>2048</a>
-          </li>
-          </li>
-          <li>
-            <a href='/transform/index.html'>Animation</a>
           </li>
         </ul>
       </nav>
