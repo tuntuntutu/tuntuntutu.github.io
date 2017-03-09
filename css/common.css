@@ -51,25 +51,48 @@ header .nav li a {
 }
 
 .tt-banner:after {
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    background: #fff;
-    opacity: 0.2;
-    transform: scale(0, 1);
-}
-
-.tt-banner:after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background: #fff;
+    opacity: 0.2;
+    transform: scale(0, 1);
     transition: transform 0.5s ease;
 }
 
 .tt-banner:hover:after {
     transform: scale(1);
+}
+
+.tt-menu {
+    color: #a5e6ab;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: #5dd46d;
+    color: #fff;
+}
+
+.tt-menu .navbar-brand {
+    font-weight: 500;
+    color: #fff;
+    font-size: 30px;
+    margin-left: -15px;
+}
+
+.tt-menu .navbar-nav > li > a,
+.tt-menu .navbar-nav > li > a:hover,
+.tt-menu .navbar-nav > .active > a:hover {
+    color: #fff;
+    background: #5dd46d;
+}
+
+.tt-menu .navbar-nav > .active > a, .tt-menu .navbar-nav > li > a:hover, .tt-menu .navbar-nav > .active > a:hover {
+    background: #4ac94a;
 }
 
 .tt-lg {
@@ -85,6 +108,25 @@ header .nav li a {
     text-align: center;
     cursor: default;
     border-radius: 15%;
+}
+
+.tt-back{
+    position:fixed;
+    top:10px;
+    left:100px;
+    width:20px;
+    height: 20px;
+}
+.tt-back:before,.tt-back:after{
+    display: block;
+    content:" ";
+    width:20px;
+    height: 9px;
+    background: #666;
+    transform: rotate(-45deg);
+}
+.tt-back:after{
+    transform: rotate(45deg);
 }
 
 .u-loading {

@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-9" role="main">
+        <div class="bs-docs-section" v-for="wt in widgets">
+            <h1 class="page-header" id="{{wt.name}}">{{wt.name}}</h1>
+
+            <p v-html="wt.desc"></p>
+            <component :is="wt.wName" :provinces="provinces"></component>
+            <div class="u-highlight">
+                <pre><code class="html" v-html="wt.code"></code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="tt-nav">
+            <ul class="list-group">
+                <a href="javascript:;" v-for="wt in widgets" class="list-group-item"  @click="nav(wt)" :class="{'active':wt.current}">
+                    {{wt.name}}
+                </a>
+            </ul>
+        </div>
+    </div>
+    <a class="u-gotoTop" href="#top">
+        <span class="glyphicon glyphicon-arrow-up"></span>
+    </a>
+</div>

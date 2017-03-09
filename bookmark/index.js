@@ -11,7 +11,7 @@ require(['../lib/vue.min', 'text!./bookmark.html', 'util', 'text!./cache.json'],
         showType: 'anchor' //展示效    果，是切换面板还是锚点
     }, data;
     var local = util.$getLocalStorage('bookmark');
-    if (local && local.nest == config.nest && local.version== config.version ) {
+    if (local && local.nest == config.nest && local.version == config.version) {
         data = local;
     } else {
         util.$setLocalStorage('bookmark', null);

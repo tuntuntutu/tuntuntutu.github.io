@@ -7,37 +7,37 @@
         "children": [
           {
             "url": "http://webcode.nie.netease.com/?html,js,output",
-            "father": "TOOLS",
+            "father": "daily",
             "name": "在线代码测试",
             "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACjUlEQVQ4jX2Sz2tcdRTFP/e+n4mTmdQakvfSmkApYsFNN6VCa3dRkFYXXSoupf+BIIgg9D8oXXRVu7AUFy6kzrIK2blwYUA0UmpnSNNB2zHTZOa9770u3owGxd7lvd9zvueeewTg6rVrR5ZfOvazqr5oZubuIiLCofKm6aqqZvb7o8HDkx9dufJHDLBSFO6VzEqBf+OZ9rwZiKwUhQPEAJOq5TH7VR3C2PHgIYhGMbjNsJgFJIrdQoiAqqpa3kwaefLhx5+e2/z+hztmdZ7Mt60eDUXjFHAs1MTzC16NnmoUZwdnT792+fpnn3wnIi5TEmft1aJcXvrl2NsfzC+d3aDf/YLdb78CVVbfeo+l19+k373No3tfPus/fnKC+z/uAKKAAyx3FvK8fcSKc5e8VZaU59+xOIo8a7W9eONda5UlxfmLHme5ra8fz2fe6myNubL0ejSU/je3ZLi95b3uTUFEbH8k/bufy3B7y/vdW0IdhHyG55DVx18pV1fLrVBNFjROzEJNlGbi7lg1do0SrK40SrI/e73eKX77qf/3FW52uy/Uw8mN3s5Obu4Bx0VE3IODICq44+Cuonm5snIjaaeX39/YGMUAe4NBOpe1L5xYW8ssBAPEQcARhOCCoO64RxoldbV/YW8wSIGGYDyZeJ6wNx6P8yaIThMkJ5hwZv1rjrYeewiRuyS+uX1x7/7uqX+CBIsgrogKIKKKSnMe8YijrV2KxQdUdSJGJnEU9AmLAChAlj4TvPlTRBAQMxM3xN2lDolUdSp1SKlDipnI+OChHFLw35qtAI65EFwJrhiKA53pu/8l8GnSIzU2f71ErNZYqspBNUfn5QfPJzikhf2qwzRvqCp4RYenAPwFoBg2Qkee9IAAAAAASUVORK5CYII="
           },
           {
             "url": "http://blog.csdn.net/qsq1117",
-            "father": "BLOG",
+            "father": "daily",
             "name": "我的csdn博客",
             "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABgklEQVQ4jcWTTy8DYRDGf9PubruEEFai2sSfkDRt4s9hL+Li6lu4IeFrOOMbkLhIHNzFzcWlEkoPKpGgSLuCpNXV12FrdW2ExMEcJpl35nneZ955R44QxR8s8hcwgBY+Ur4XQE8kMJIpxDRRbp23cplasYiq1r4jAHNykr6FBTrn5tD7+0P5t0eHXHfPVwJFxDRJrq3ROz8PIt+IVtSvb8ItiKYxsrdHx+ysn3R2dylvb1M9zdN4fkLiJvpAgmhHZ5jAWlwKgK9Wlrlb30AIKqkVCoFYPsaYPs5hZrNe0cUFJ6OjKKVCBF/NH2M8nQ7c4oF/Np+g4ThNTR6ZaBq/+WE+QWVnp4kXYoODDG1tYiSTKBQ0PSgi8ZgfQcsbRLu6GDvYp218witVCpTitXhJ/eEe0TR0y6JeKnFm257UVgWuU+F8eobb1VXcSrlJLxjDQ7TbNm1TU+ipFG6pFGhNPpepRZZh0G7bxDMZNMtColEa1Rru/R0vh4dU83lfgfz7Nr4Doo6Dci0l0QIAAAAASUVORK5CYII="
           },
           {
             "url": "chrome://net-internals/#dns",
-            "father": "常用",
+            "father": "daily",
             "name": "清理chrome缓存",
             "icon": ""
           },
           {
             "url": "http://img21.mtime.cn/CMS/Gallery/2011/07/02/170837.97014036_160X160.jpg",
-            "father": "常用",
+            "father": "daily",
             "name": "图片生成",
             "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIklEQVQ4jZWTv2uTQRjHP3f35u5N0SZpFfrDJpGqg5W8dRAcaurQRVCKS8Ghg/+AoK7toA46uPgPqHTuUMVZBxeRQg2iKHWI4m+kTZO+yZs0yTnkTdqQOnhwHHfP9z58n+fuEaxay/+OZhMR7EBQxQEwdx/tL1QSpAIlsUqG+3BVkvrMWeRe/ev7swTLV0mNxMHVWGOwrsa6EbKZEaoP51i+NhXGNGz7IUAKcBwy6QEAFuZOtwRupDWNZnF2AgBvLIZ1NUQNohgCrDGcmzzScTI/lSY1uusiOzFM9tggAMlElNRQDFyNKJVDB24Eb3ywK/3FSyexroGoZvHCia6YNxbHGo0o+a0iYjReaqBLNH9mlCefNkEIskfjXbHMaD8r3yrIr79bAOsavLFYzyMsXzm17+OcT/VzO7cZ1sBa4ok+MsMH9xXnizUK1UZ3Coei4GoIqkixXSGTTABw8/mXHsDM0zxL61tdZzEt8YYPQKOJFKUy0+MDvPrh8+DtBvlirSNcWt8ivyNZ+V7tAXuHowBISj4Xjye4t/YHXMOdNxsd0a13RayJkNtu9gIGDQCOKPm8/BXw7GcNazSPP1fIfCiSK9bJ1yVEHQpKki83SPepDmAyFmkDylxfK4DRoAQoyY33fuv/uxqUAinJ+ZZ0366D6XgL5lDyITkEjgSlsHuapX0ZJbn8sY5dt7sNJQWm7cB5sQpBFRHUoNGEZm/O/xp/AXwNp3YzreiMAAAAAElFTkSuQmCC"
           },
           {
             "url": "http://note.youdao.com/web/#/file/0A24A7ACAC9D4A90B310DFA9F54E5779/note/C3C115B090B14FF78029F1BE6F2915AA",
-            "father": "常用",
+            "father": "daily",
             "name": "有道云笔记",
             "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACUElEQVQ4jT3TMYtdVRTF8d8+9943b4JmSJwUyWBatUhQJAYESRNUMPgdbAR7C8XCRFMY0giJBq0s/ARWamURMAqKVYo0itVkMELCzJv35t17tsV9z24X67/OOWufFa5mcTXqua/y+ab4UHpDOCUFkGE9IjJlRCKkRcC5r/PypPONYqcuGDVk0sRID3XtQCS5ns9/ns+1x9yN1nadWyqalUYb4vEiRYTjE5YDEeMNIkWGLM2Gj6K1nXNLoZXkILoUezP56k545Qx7M7pADTEISQyiNXgz56qqiSCJScjdQ147K+5coeLd77j3Nyen9JWVVom0rReqyIGuiocH4tKz4s5bbHQcm3DzdV46zeNDWqhEpURFFQbRpvh3Li+d5YsrPDUdT9nb58kRn17m5TPMFjSJgWI00JCzI/nCM+L22yu48mg2vj+CErRjRqKOSZeoxEBJjhbi4s4I18o/hzw8YKNFcv0H7v3F050ceqRsox/XW4hllSc2GKrY2x8NNrvR7LMf+flPuT1luRSxyqGoIitNytlS7BwXTeFgYGuToefG99x9wKlO9L0oKWMMMVrVUQldP3CylT89YG9fPNqXh0txf5f7u3J7Q/RVBqtvKCPM48L1/K20Xqy92oTmyYL5wCREQdewOaHmChsNhuiU7P1eVLeaUEqKOqhbE3l6Kk5M5dam3GxlHaQqVKkapFJCMbgdcPGTvNl03q89tV/1pJBVRKx6t+5SI6IwLN349eP44P+eXriW77ThveydzzBZI2tyZTRX/GHw5S/X4lsy/gMVNRjDGIsa8wAAAABJRU5ErkJggg=="
           },
           {
             "url": "http://v3.bootcss.com/components/",
-            "father": "常用",
+            "father": "daily",
             "name": "Bootstrap v3 文档",
             "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACMElEQVQ4jWWTz0tUURTHP++9q2MFUWP+SjOxWTSFFRGSiCGBK93UIooIhMJVkLSQoEVEBIF/QCLhQqpFUFAyUaFB0WIyGlpIZFGGY6IpWkMzzTjv3dPizbz3Zjpw37vncM/3fM/33GukUqnqO8NPRxPx2V7HdkIETdyPUGpKmbnDR/fGLgz1Dlg11oG78VczJ+28o7QW/KVxtHb3jusXY7btqOTccnR5YT1ihc3941prJSVV/Y3vlvkISwtrrSqft0PBw5eunaK5ta6Ecn7D4cvHeR6MTfF7Pe3B5DfyISUiJdXqG6vZvaeBtdUUmT9ZKioVTS3biESbqNsZ5sblMZ+DCErQHq+gWPdGnvEy9h4QOo63MXTzHJF9uxCvFfevvICUdyiIaAAsywQg+W0ZEfHnIgUACYhUBOm/2Mfp8z1Ylsn2HVvJpLOMDD9EF0CLLZhaNCLaRRbxcObnlvgw/ZlEfJavsz/YvKWKK7f6qdpUiYhGF3K8FpDSCzM58ZbJiXcAmKbB6KOrNDbXcKQzyusXCY+18noqn7/gaWBaCtMyAKiotNCBySmXflA6106c7aar5xCGYdDUUkdtfZhMOksi/skDBlBaitXd1NzfDTLpLLUNYWobwgDYeZvpNzOM346x+vOXN0oAo699MGvbdsjvovTpBA+X81SWlTPbu6Kxog7+JPxVTCiJFSToONYWsx4/vz+1+H0lsphcaXUflZST+M+UsnKd3QefDF4/M/APcmlelQCwcvAAAAAASUVORK5CYII="
           }
@@ -1175,7 +1175,7 @@
     ],
     "anchors": [
       {
-        "title": "常用",
+        "title": "daily",
         "selected": false
       },
       {
