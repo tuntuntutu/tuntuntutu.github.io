@@ -1,6 +1,6 @@
 ## Tuntun&Tutu
-
-### 传送门
+ > https://tuntuntutu.github.io
+### 索引
 
       │
       ├── /recruit [一个简易的招聘网页](https://tuntuntutu.github.io/recruit/index.html)
