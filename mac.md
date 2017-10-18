@@ -10,3 +10,4 @@
 - tickeys(模拟键盘敲击声音)
 - clipMenu || paste 剪贴板历史
 - go2shell
+- 
