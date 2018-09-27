@@ -14,15 +14,11 @@ document.body.contentEditable=true
 
 ## 获取某个DOM元素绑定的事件
 
-```
 getEventListeners($('selector'))
-```
 
 ## 列出某个元素的所有属性
 
-```
 dir($('selector')) 
-```
 
 ## 获取最后计算结果的值
 

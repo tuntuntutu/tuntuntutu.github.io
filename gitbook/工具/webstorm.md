@@ -1,7 +1,6 @@
 JetBrain常见软件：webstorm，phpstorm，Intellij Idea等
 
 
-
 ## 插件
 
 #### Key Promoter：
@@ -12,7 +11,7 @@ JetBrain常见软件：webstorm，phpstorm，Intellij Idea等
 
  [Material Theme UI](https://github.com/mekwall/obsidian-color-schem  )
 
-![image](https://note.youdao.com/yws/res/2943/WEBRESOURCE00d686a7e61e47b979bd032c592ffc1f)
+![image](https://note.youdao.com/yws/res/2943///note.youdao.com/src/WEBRESOURCE00d686a7e61e47b979bd032c592ffc1f)
 
 #### liveEdit：
 
@@ -34,21 +33,18 @@ JetBrain常见软件：webstorm，phpstorm，Intellij Idea等
 
 配置代码片段，快速生成业务代码，可配置参数占位，并且提供了如fileNameWithoutExtension(当前文件名称)等api加工占位参数，默认tab切换。
 
-![image](https://note.youdao.com/yws/res/2971/WEBRESOURCE2b30253edb90988ae46031e061461d9d)
+![image](https://note.youdao.com/yws/res/2971///note.youdao.com/src/WEBRESOURCE2b30253edb90988ae46031e061461d9d)
 
 #### 字体偏好
-Lucida Sans typewriter（见上图）
+Lucida Sans typewriter
 
 #### css格式化风格
-editor-> code Style -> CSS 
-勾选keep single-line blocks 
+editor-> code Style -> CSS
+勾选keep single-line blocks
 
 #### 内存实时显示
 appearance->appearance->勾上show memory indicator
 
-#### 快速复制
-
-默认的ctrl+D复制模块时时紧跟在选中代码的后面，可以移除duplicate lines or block修改duplicate lines为ctrl+D
 
 #### 忽略文件或文件夹
 Editor->File Types->ignore files and folders
@@ -65,7 +61,7 @@ Editor->General->Code Folding
 
 #### 支持es6
 
-setting——Languages & frameworks——javascript 
+setting——Languages & frameworks——javascript
 
 选择ECMAScript6
 
@@ -79,13 +75,13 @@ http://blog.csdn.net/lablenet/article/details/51149283
 ```
 
 #### autoPrefixer安装
-1. 全局安装autoprefixer 
+ 1. 全局安装autoprefixer
 
 ```
 npm install autoprefixer -g
 ```
 
-2. 安装 postcss-cli
+ 2. 安装 postcss-cli
 
 ```
 npm install postcss-cli -g
@@ -94,7 +90,7 @@ npm install postcss-cli -g
  3. 打开Webstorm设置，Preferences -> Tools -> External Tools ;配置如图
 ![enter description here][1]
 
-``` 
+```
 //输入框内容
 C:\Users\hzqiushengqiang\AppData\Roaming\npm\postcss.cmd
 
@@ -113,7 +109,7 @@ a{
 ```
 
  5. 右键External Tools -> autoPrefixer，代码自动变成
- 
+
 
 ``` css
 a{
@@ -135,7 +131,15 @@ setting->Appearance & Behavior -> System Setting -> Use 'safe write'(save change
 
 config为个性化配置文件存储位置，复制覆盖新电脑的相同位置即可
 
-## 传送门：
+## 快捷键设置
+
+> 仅供参考，本人选择 OSX版本，以下为部分定制化修改
+
+- duplicate lines or block: ctrl + D
+- extend selection：  ctrl + W
+- fix eslint problems： command + shift + O
+
+# 传送门：
 
 
 [官网速成](http://blogs.jetbrains.com/idea/tag/30-days-guide)

@@ -48,3 +48,9 @@ if (window.location != window.parent.location){
     window.parent.location = window.location;
 }
 ```
+
+## XSS
+- CSP（Content Security Policy），限制src加载域名
+```html
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' img.alicdn.com;">
+```
